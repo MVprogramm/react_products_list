@@ -1,5 +1,5 @@
 import React from "react";
-import CardTitle from "./CardTitle.jsx";
+import CartTitle from "./CartTitle.jsx";
 import ProductsList from "./ProductsList.jsx";
 
 import "./column.scss";
@@ -18,7 +18,7 @@ class ShoppingCart extends React.Component {
     
     return (
       <div className="column">
-        <CardTitle 
+        <CartTitle 
           userName={this.props.userName}
           count={count}
         />

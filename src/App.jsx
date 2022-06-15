@@ -2,7 +2,7 @@ import React from "react";
 
 import "./index.scss";
 
-import ShoppingCard from "./ShoppingCard.jsx";
+import ShoppingCart from "./ShoppingCart.jsx";
 import Profile from "./Profile.jsx";
 import products from './products.jsx';
 
@@ -35,7 +35,7 @@ class App extends React.Component {
       <div className="page">
         <h1 className="title">Hello, {firstName} {lastName}</h1>
         <main className="content">
-          <ShoppingCard 
+          <ShoppingCart
             productsList={products()}
             userName={firstName}
           />
