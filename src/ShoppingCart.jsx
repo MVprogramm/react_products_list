@@ -5,24 +5,36 @@ import ProductsList from "./ProductsList.jsx";
 import "./column.scss";
 
 class ShoppingCart extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      productsList: this.props.productsList,
-    };
-  }
-   
+  state = {
+    cartItems: [
+      {
+        id: '1',
+        name: 'iPad Pro',
+        price: 799,
+      },
+      {
+        id: '2',
+        name: 'iPhone 11',
+        price: 999,
+      },
+      {
+        id: '3',
+        name: 'MacBook Pro',
+        price: 2999,
+      },
+    ],
+  };
+     
   render() {
-    const count = this.props.productsList.length;
+    const count = this.state.cartItems.length;
     
     return (
       <div className="column">
         <CartTitle 
-          userName={this.props.userName}
+          userName={this.props.userData.firstName}
           count={count}
         />
-        <ProductsList cartItems={this.props.productsList} />
+        <ProductsList cartItems={this.state.cartItems} />
       </div>
     );
   }

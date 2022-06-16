@@ -14,7 +14,6 @@ class App extends React.Component {
     }
   }
   
-
   handleChange = (event) => {
     const { name, value } = event.target;
       this.setState({
@@ -34,7 +33,7 @@ class App extends React.Component {
         <main className="content">
           <ShoppingCart
             productsList={products()}
-            userName={firstName}
+            userData={this.state.userData}
           />
           <Profile 
             userData={this.state.userData}
