@@ -31,7 +31,7 @@ class App extends React.Component {
         <h1 className="title">Hello, {firstName} {lastName}</h1>
         <main className="content">
           <ShoppingCart
-            userData={this.state.userData}
+            userName={firstName}
           />
           <Profile 
             userData={this.state.userData}

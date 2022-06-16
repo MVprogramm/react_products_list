@@ -13,14 +13,14 @@ const ProductsList = ({ cartItems }) => {
       )
   });
 
-  const productsTotal = cartItems.reduce((acc, cart) => (acc = acc + cart.price), 0);
+  const total = cartItems.reduce((acc, cart) => (acc = acc + cart.price), 0);
 
   return (
     <div className="products">
       <ul className="products__list">
         {productsList}
       </ul>
-      <div className="products__total">Total: ${productsTotal}</div>
+      <div className="products__total">Total: ${total}</div>
     </div>
   );
 }
