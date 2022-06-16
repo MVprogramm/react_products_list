@@ -4,7 +4,6 @@ import "./index.scss";
 
 import ShoppingCart from "./ShoppingCart.jsx";
 import Profile from "./Profile.jsx";
-import products from './products.jsx';
 
 class App extends React.Component {
   state = {
@@ -32,7 +31,6 @@ class App extends React.Component {
         <h1 className="title">Hello, {firstName} {lastName}</h1>
         <main className="content">
           <ShoppingCart
-            productsList={products()}
             userData={this.state.userData}
           />
           <Profile 
