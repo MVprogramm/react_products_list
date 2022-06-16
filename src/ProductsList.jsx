@@ -2,8 +2,8 @@ import React from "react";
 
 import "./productsList.scss";
 
-const ProductsList = (props) => {
-  const productsList = props.cartItems.map(
+const ProductsList = ({ cartItems }) => {
+  const productsList = cartItems.map(
     (cart) => {
       return (
         <li className="products__list-item" key={cart.id}>
@@ -13,7 +13,7 @@ const ProductsList = (props) => {
       )
   });
 
-  const productsTotal = props.cartItems.reduce((acc, cart) => (acc = acc + cart.price), 0);
+  const productsTotal = cartItems.reduce((acc, cart) => (acc = acc + cart.price), 0);
 
   return (
     <div className="products">
