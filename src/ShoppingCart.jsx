@@ -17,11 +17,6 @@ class ShoppingCart extends React.Component {
         name: 'iPhone 11',
         price: 999,
       },
-      {
-        id: '3',
-        name: 'MacBook Pro',
-        price: 2999,
-      },
     ],
   };
      
