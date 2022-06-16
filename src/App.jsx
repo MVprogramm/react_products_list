@@ -7,29 +7,26 @@ import Profile from "./Profile.jsx";
 import products from './products.jsx';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      firstName: this.props.userData.firstName,
-      lastName: this.props.userData.lastName,
+  state = {
+    userData: {
+      firstName: 'John',
+      lastName: 'Doe'
     }
   }
+  
 
   handleChange = (event) => {
-    if (event.target.name === 'firstName') {
+    const { name, value } = event.target;
       this.setState({
-        firstName: event.target.value,
+        userData: {
+          ...this.state.userData,
+          [name]: value
+        }
       });
-    } else {
-      this.setState({
-        lastName: event.target.value,
-      });
-    }
   }
 
   render() {
-    const { firstName, lastName } = this.state;
+    const { firstName, lastName } = this.state.userData;
 
     return (
       <div className="page">
@@ -40,8 +37,8 @@ class App extends React.Component {
             userName={firstName}
           />
           <Profile 
-            userData={this.state}
-            onChange={this.handleChange}
+            userData={this.state.userData}
+            handleChange={this.handleChange}
           />
         </main>
       </div>

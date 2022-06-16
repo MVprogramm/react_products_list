@@ -3,12 +3,12 @@ import React from "react";
 import UserForm from "./UserForm.jsx";
 import "./column.scss";
 
-const Profile = (props) => {
+const Profile = ({ userData, handleChange }) => {
   return (
     <div className="column">
       <UserForm 
-        userData={props.userData}
-        onChange={props.onChange}
+        userData={userData}
+        handleChange={handleChange}
       />
     </div>
   );

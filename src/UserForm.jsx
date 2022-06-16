@@ -2,22 +2,22 @@ import React from "react";
 
 import "./userForm.scss";
 
-const UserForm = (props) => {
+const UserForm = ({ userData, handleChange }) => {
   return (
     <form className="user-form">
       <input 
         type="text" 
         name="firstName" 
         className="user-form__input" 
-        onChange={props.onChange}
-        value={props.userData.firstName} 
+        onChange={handleChange}
+        value={userData.firstName} 
       />
       <input 
         type="text" 
         name="lastName" 
         className="user-form__input"
-        onChange={props.onChange}
-        value={props.userData.lastName}  
+        onChange={handleChange}
+        value={userData.lastName}  
       />
     </form>
   );
